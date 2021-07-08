@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-// this is a change
+import java.util.Scanner; // Import scanner module
 
 public class BankingApplication {
 
@@ -31,7 +29,7 @@ class BankAccount {
 		}
 	}
 
-	void withdraw(int amount) {
+	void withdraw(int amount) { // Subtracts amount from balance
 
 		if (amount != 0) {
 			balance = balance - amount;
@@ -39,7 +37,7 @@ class BankAccount {
 		}
 	}
 
-	void getPreviousTransaction() {
+	void getPreviousTransaction() { // Recieves last transaction amount
 
 		if (previousTransaction > 0) {
 			System.out.println("Deposited: "+previousTransaction);
@@ -52,7 +50,7 @@ class BankAccount {
 		}
 	}
 
-	void showMenu(){
+	void showMenu(){ // user interface menu
 
 		char option='\0';
 		Scanner scanner = new Scanner(System.in);
@@ -66,6 +64,7 @@ class BankAccount {
 		System.out.println("D. Previous transaction");
 		System.out.println("E. Exit");
 
+		// Options
 		do {
 			System.out.println("========================");
 			System.out.println("|Enter an option       |");
@@ -107,7 +106,7 @@ class BankAccount {
 					System.out.println("\n");
 					break;
 
-				case 'E':
+				case 'E': // Exit program
 					System.out.println("****************************");
 					break;
 
